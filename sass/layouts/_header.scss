@@ -1,0 +1,26 @@
+.header {
+    padding: 22px 12px 12px 12px;
+    box-shadow: 0 0 10px rgb(175, 171, 171);
+    position: relative;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+
+    &__logo {
+        position: relative;
+        font-family: 'Shrikhand', cursive;
+        text-align: center;
+        margin: 0;
+    }
+
+    &__fleche {
+        font-size: 1.40em;
+        position: relative;
+        right: 65px;
+        align-self: center;
+
+        &__home {
+            display: none;
+        }
+    }
+}

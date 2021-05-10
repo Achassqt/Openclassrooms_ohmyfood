@@ -1,0 +1,19 @@
+@mixin button {
+    border: 0;
+    height: 49px;
+    width: 230px;
+    font-size: 1em;
+    font-weight: 600;
+    color: white;
+    border-radius: 50px;
+    background: linear-gradient(0deg, $color-primary, $color-secondary);
+    box-shadow: 0 5px 12px #c6c6c6;
+    cursor: pointer;
+
+    &:hover {
+        background: linear-gradient(0deg, lighten($color-primary, 3%), lighten($color-secondary, 3%));
+        box-shadow: 0 5px 12px darken(rgb(198, 198, 198), 20%);
+    }
+}
+
+
