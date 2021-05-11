@@ -1,7 +1,7 @@
-@mixin button {
+@mixin button($padding) {
     border: 0;
     height: 49px;
-    width: 230px;
+    padding: $padding;
     font-size: 1em;
     font-weight: 600;
     color: white;

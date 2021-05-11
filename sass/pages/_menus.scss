@@ -14,7 +14,7 @@
     &__header {
         display: flex;
         justify-content: space-between;
-        padding: 36px 35px 25px 20px;
+        padding: 36px 35px 30px 20px;
     }
 
     &__titre {
@@ -26,5 +26,83 @@
 
     &__btnc {
         align-self: center;
+    }
+}
+
+.carte {
+    padding: 0 14px;
+
+    .containers {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 22px;
+
+        &__titre {
+            font-weight: normal;
+            font-size: 1em;
+            margin: 5px 0 7px 5px;
+            padding-bottom: 7px;
+            align-self: flex-start;
+            position: relative;
+
+            &::after {
+                content: "";
+                width: 40px;
+                height: 3px;
+                background-color: $color-tertiary;
+                position: absolute;
+                left: 0;
+                bottom: 0;
+            }
+        }
+
+        .items {
+            display: flex;
+            justify-content: space-between;
+            background-color: white;
+            height: 67px;
+            width: 100%;
+            margin: 7px 0;
+            border-radius: 15px;
+            box-shadow: 0 5px 12px #e6e6e6;
+
+
+            &__txt {
+                align-self: center;
+
+                &__titre {
+                    margin: 0;
+                    margin-bottom: 5px;
+                    margin-left: 10px;
+                }
+
+                &__sous-titre {
+                    margin: 0;
+                    margin-top: 5px;
+                    margin-left: 10px;
+                    font-size: 0.95em;
+                }
+            }
+
+            &__prix {
+                align-self: flex-end;
+                margin-bottom: 11px;
+                margin-right: 20px;
+                font-size: 0.90em;
+            }
+        }
+    }
+}
+
+.commander {
+    height: 130px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &__btn {
+        @include button(0 47px);
+        margin-bottom: 45px;
     }
 }
