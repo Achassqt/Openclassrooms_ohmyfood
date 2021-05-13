@@ -20,6 +20,50 @@
   }
 }
 
+@-webkit-keyframes itemsAnim {
+  0% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@keyframes itemsAnim {
+  0% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@-webkit-keyframes circle {
+  0% {
+    -webkit-transform: rotate(-360deg);
+            transform: rotate(-360deg);
+  }
+  100% {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+}
+
+@keyframes circle {
+  0% {
+    -webkit-transform: rotate(-360deg);
+            transform: rotate(-360deg);
+  }
+  100% {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+}
+
 body, html {
   margin: 0;
   font-family: 'Roboto', sans-serif;
@@ -448,7 +492,7 @@ a {
   bottom: 0;
 }
 
-.carte .containers .items {
+.items {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -461,9 +505,13 @@ a {
           box-shadow: 0 5px 12px #e6e6e6;
   cursor: pointer;
   position: relative;
+  -webkit-transform: scale(0);
+          transform: scale(0);
+  -webkit-animation: itemsAnim 500ms both;
+          animation: itemsAnim 500ms both;
 }
 
-.carte .containers .items__txt {
+.items__txt {
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
@@ -474,7 +522,7 @@ a {
           flex-grow: 1;
 }
 
-.carte .containers .items__txt__titre {
+.items__txt__titre {
   margin: 0;
   margin-bottom: 5px;
   margin-left: 10px;
@@ -482,7 +530,7 @@ a {
   overflow: hidden;
 }
 
-.carte .containers .items__txt__sous-titre {
+.items__txt__sous-titre {
   margin: 0;
   margin-top: 5px;
   margin-left: 10px;
@@ -491,7 +539,7 @@ a {
   overflow: hidden;
 }
 
-.carte .containers .items__prix {
+.items__prix {
   -ms-flex-item-align: end;
       align-self: flex-end;
   margin-bottom: 11px;
@@ -500,14 +548,14 @@ a {
   padding-left: 20px;
 }
 
-.carte .containers .items:hover .items__prix {
+.items:hover .items__prix {
   padding-left: 10px;
   margin-right: 80px;
   -webkit-transition: margin-right 500ms;
   transition: margin-right 500ms;
 }
 
-.carte .containers .items__ok {
+.items__ok {
   min-width: 58px;
   height: 100%;
   display: -webkit-box;
@@ -528,17 +576,22 @@ a {
   display: none;
 }
 
-.carte .containers .items__ok__icon {
+.items__ok__icon {
   color: white;
   font-size: 1.3em;
 }
 
-.carte .containers .items:hover .items__ok {
+.items:hover .items__ok {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-animation: okIcon 500ms both;
           animation: okIcon 500ms both;
+}
+
+.items:hover .items__ok__icon {
+  -webkit-animation: circle 500ms;
+          animation: circle 500ms;
 }
 
 .commander {
@@ -577,14 +630,48 @@ a {
           box-shadow: 0 5px 12px #939393;
 }
 
-@keyframes okIcon {
-  0% {
-    -webkit-transform: scaleX(0);
-            transform: scaleX(0);
-  }
-  100% {
-    -webkit-transform: scaleX(1);
-            transform: scaleX(1);
-  }
+.delay-1 {
+  -webkit-animation-delay: 0.1s;
+          animation-delay: 0.1s;
+}
+
+.delay-2 {
+  -webkit-animation-delay: 0.2s;
+          animation-delay: 0.2s;
+}
+
+.delay-3 {
+  -webkit-animation-delay: 0.3s;
+          animation-delay: 0.3s;
+}
+
+.delay-4 {
+  -webkit-animation-delay: 0.4s;
+          animation-delay: 0.4s;
+}
+
+.delay-5 {
+  -webkit-animation-delay: 0.5s;
+          animation-delay: 0.5s;
+}
+
+.delay-6 {
+  -webkit-animation-delay: 0.6s;
+          animation-delay: 0.6s;
+}
+
+.delay-7 {
+  -webkit-animation-delay: 0.7s;
+          animation-delay: 0.7s;
+}
+
+.delay-8 {
+  -webkit-animation-delay: 0.8s;
+          animation-delay: 0.8s;
+}
+
+.delay-9 {
+  -webkit-animation-delay: 0.9s;
+          animation-delay: 0.9s;
 }
 /*# sourceMappingURL=main.css.map */
