@@ -1,0 +1,51 @@
+.loader {
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    z-index: 10;
+    opacity: 1;
+
+    &__logo {
+        font-family: 'Shrikhand', cursive;
+        font-size: 12vw;
+        display: flex;
+        margin-bottom: 70px;
+        opacity: 0;
+        animation: omf 2s both;
+    }
+}
+
+.oh {
+    animation: omf 2s both;
+    animation-delay: 750ms;
+}
+
+.my {
+    animation: omf 2s both;
+    animation-delay: 500ms;
+}
+
+.food {
+    animation: omf 2s both;
+    animation-delay: 250ms;
+}
+
+.progress {
+    width: 35vw;
+    height: 2px;
+    border: solid 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &__bar {
+        background-color: $color-tertiary;
+        width: 100%;
+        height: 100%;
+    }
+}
