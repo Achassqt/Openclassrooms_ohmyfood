@@ -31,10 +31,55 @@
 @keyframes omf {
     0% {
         opacity: 0;
+        transform: translateY(-200%);
+    }
+
+    10% {
+        opacity: 1;
     }
 
     100% {
         opacity: 1;
-        transform: translateY(50%);
+        transform: translateY(0%);
+    }
+}
+
+@keyframes progress-bar {
+    0% {
+        transform: scaleX(0);
+    }
+
+    100% {
+        transform: scaleX(1);
+    }
+}
+
+@keyframes progress {
+    0% {
+        transform: translateY(0);
+    }
+
+    70% {
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(1000%);
+        opacity: 0;
+    }
+}
+
+@keyframes loader {
+    0% {
+        opacity: 1;
+    }
+    
+    10% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 0;
+        z-index: -100;
     }
 }

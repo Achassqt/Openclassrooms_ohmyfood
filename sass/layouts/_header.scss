@@ -15,9 +15,13 @@
 
     &__fleche {
         font-size: 1.40em;
-        position: relative;
-        right: 65px;
+        position: absolute;
+        left: 22px;
         align-self: center;
+
+        @media (min-width: 1120px) {
+            left: 40px;
+        }
 
         &__home {
             display: none;
