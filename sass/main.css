@@ -966,4 +966,9 @@ a {
   -webkit-animation-delay: 0.9s;
           animation-delay: 0.9s;
 }
+
+.delay-10 {
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
+}
 /*# sourceMappingURL=main.css.map */
