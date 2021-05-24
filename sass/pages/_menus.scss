@@ -31,7 +31,8 @@
     }
 
     &__btnc {
-        align-self: center;
+        position: relative;
+        top: 4px;
     }
 }
 
@@ -165,7 +166,7 @@
 }
 
 
-@for $i from 1 through 10 {
+@for $i from 1 through 9 {
     .delay-#{$i} {
         animation-delay: #{$i/10}s;
     }

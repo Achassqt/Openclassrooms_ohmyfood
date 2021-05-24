@@ -185,40 +185,60 @@ a {
 }
 
 .like {
-  position: relative;
-  width: 30px;
-  height: 30px;
+  height: 40px;
+  width: 40px;
   font-size: 1.65em;
+  cursor: pointer;
+  position: relative;
 }
 
-.like__vide {
-  position: absolute;
-  cursor: pointer;
-  width: 100%;
-  height: 100%;
-  text-align: center;
-}
-
-.like__full {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  text-align: center;
-  cursor: pointer;
-  background: linear-gradient(200deg, #9356DC 0%, #FF79DA 60%);
-  color: transparent;
-  -webkit-background-clip: text;
+.like::before {
   opacity: 0;
-  -webkit-transition: -webkit-transform 100ms;
-  transition: -webkit-transform 100ms;
-  transition: transform 100ms;
-  transition: transform 100ms, -webkit-transform 100ms;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background: -webkit-gradient(linear, left bottom, left top, from(#9356DC), to(#FF79DA));
+  background: linear-gradient(0deg, #9356DC 0%, #FF79DA 100%);
 }
 
-.like__full:hover {
+.like:hover::before {
   opacity: 1;
-  -webkit-transform: scale(1.06);
-          transform: scale(1.06);
+}
+
+.full {
+  -webkit-transition-duration: .25s;
+          transition-duration: .25s;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  mix-blend-mode: lighten;
+  background-color: white;
+  text-align: center;
+}
+
+.full--menu {
+  background-color: #f6f6f6;
+}
+
+.vide {
+  -webkit-transition-duration: .25s;
+          transition-duration: .25s;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-color: white;
+  text-align: center;
+}
+
+.vide--menu {
+  background-color: #f6f6f6;
+}
+
+.like:hover .vide {
+  opacity: 0;
 }
 
 .header {
@@ -689,7 +709,7 @@ a {
 .restaurants__container__btnc {
   position: absolute;
   right: 23px;
-  bottom: 25px;
+  bottom: 18px;
 }
 
 .image-de-fond {
@@ -733,9 +753,8 @@ a {
 }
 
 .menu__btnc {
-  -ms-flex-item-align: center;
-      -ms-grid-row-align: center;
-      align-self: center;
+  position: relative;
+  top: 4px;
 }
 
 .carte {
@@ -965,10 +984,5 @@ a {
 .delay-9 {
   -webkit-animation-delay: 0.9s;
           animation-delay: 0.9s;
-}
-
-.delay-10 {
-  -webkit-animation-delay: 1s;
-          animation-delay: 1s;
 }
 /*# sourceMappingURL=main.css.map */

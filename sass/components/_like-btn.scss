@@ -1,32 +1,87 @@
-.like {
-  position: relative;
-  width: 30px;
-  height: 30px;
-  font-size: 1.65em;
+// .like {
+//   position: relative;
+//   width: 30px;
+//   height: 30px;
+//   font-size: 1.65em;
   
-  &__vide {
-    position: absolute;
-    cursor: pointer;
-    width: 100%;
-    height: 100%;
-    text-align: center;
+//   &__vide {
+//     position: absolute;
+//     cursor: pointer;
+//     width: 100%;
+//     height: 100%;
+//     text-align: center;
+//   }
+  
+//   &__full {
+//     position: absolute;
+//     width: 100%;
+//     height: 100%;
+//     text-align: center;
+//     cursor: pointer;
+//     background: linear-gradient(200deg, $color-primary 0%, $color-secondary 60% );
+//     color: transparent;
+//     -webkit-background-clip: text;
+//     opacity: 0;;
+//     transition: transform 100ms;
+    
+//     &:hover {
+//       opacity: 1;
+//       transform: scale(1.06);
+//     }
+//   }
+// }
+
+.like {
+  height: 40px;
+  width: 40px;
+  font-size: 1.65em;
+  cursor: pointer;
+  position: relative;
+  
+  &::before {
+      opacity: 0;
+      transition: 0.5s;
+      content: "";
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      background:linear-gradient(0deg, $color-primary 0%,$color-secondary 100%);
   }
   
-  &__full {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    text-align: center;
-    cursor: pointer;
-    background: linear-gradient(200deg, $color-primary 0%, $color-secondary 60% );
-    color: transparent;
-    -webkit-background-clip: text;
-    opacity: 0;;
-    transition: transform 100ms;
-    
-    &:hover {
+  &:hover::before {
       opacity: 1;
-      transform: scale(1.06);
-    }
+  }
+}
+
+.full {
+  transition-duration: .25s;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  mix-blend-mode: lighten;
+  background-color: white;
+  text-align: center;
+}
+
+.full--menu {
+  background-color: #f6f6f6;
+}
+
+.vide {
+  transition-duration: .25s;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-color: white;
+  text-align: center;
+}
+
+.vide--menu {
+  background-color: #f6f6f6;
+}
+
+.like:hover {
+  .vide {
+      opacity: 0;
   }
 }
