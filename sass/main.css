@@ -543,6 +543,12 @@ a {
   }
 }
 
+@media (max-width: 320px) {
+  .fonctionnement__list {
+    margin: 0 0 0 10px;
+  }
+}
+
 .fonctionnement__li {
   height: 70px;
   width: 88%;
@@ -670,6 +676,12 @@ a {
   width: 100%;
   height: 174px;
   border-radius: 15px 15px 0 0;
+}
+
+@media (max-width: 320px) {
+  .restaurants__container__img {
+    height: 140px;
+  }
 }
 
 .restaurants__container__nouveau {
