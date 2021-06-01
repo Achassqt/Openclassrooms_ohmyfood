@@ -14,7 +14,7 @@
     &__header {
         display: flex;
         justify-content: space-between;
-        padding: 36px 35px 30px 20px;
+        padding: 36px 28px 30px 20px;
 
         @media (min-width: 1120px) {
             max-width: 1120px;
@@ -32,7 +32,6 @@
 
     &__btnc {
         position: relative;
-        top: 4px;
     }
 }
 

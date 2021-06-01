@@ -190,6 +190,15 @@ a {
   font-size: 1.65em;
   cursor: pointer;
   position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .like::before {
@@ -198,8 +207,8 @@ a {
   transition: 0.5s;
   content: "";
   position: absolute;
-  height: 100%;
-  width: 100%;
+  height: 80%;
+  width: 80%;
   background: -webkit-gradient(linear, left bottom, left top, from(#9356DC), to(#FF79DA));
   background: linear-gradient(0deg, #9356DC 0%, #FF79DA 100%);
 }
@@ -212,11 +221,30 @@ a {
   -webkit-transition-duration: .25s;
           transition-duration: .25s;
   position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   height: 100%;
   width: 100%;
   mix-blend-mode: lighten;
   background-color: white;
   text-align: center;
+}
+
+.full::before {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100%;
 }
 
 .full--menu {
@@ -227,10 +255,29 @@ a {
   -webkit-transition-duration: .25s;
           transition-duration: .25s;
   position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   height: 100%;
   width: 100%;
   background-color: white;
   text-align: center;
+}
+
+.vide::before {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100%;
 }
 
 .vide--menu {
@@ -720,8 +767,8 @@ a {
 
 .restaurants__container__btnc {
   position: absolute;
-  right: 23px;
-  bottom: 18px;
+  right: 17px;
+  bottom: 26px;
 }
 
 .image-de-fond {
@@ -746,7 +793,7 @@ a {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  padding: 36px 35px 30px 20px;
+  padding: 36px 28px 30px 20px;
 }
 
 @media (min-width: 1120px) {
@@ -766,7 +813,6 @@ a {
 
 .menu__btnc {
   position: relative;
-  top: 4px;
 }
 
 .carte {
